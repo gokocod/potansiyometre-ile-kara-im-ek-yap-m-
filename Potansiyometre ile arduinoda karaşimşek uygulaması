@@ -1,0 +1,66 @@
+//POTANSİYOMETRELİ KARA ŞİMŞEK
+
+int ledler[] = {2,3,4,5,6,7};
+#define pot A0
+int sure = 20;
+
+void setup() {
+  Serial.begin(9600);
+for(int i=0; i<6; i++){
+pinMode(ledler[i],OUTPUT);
+
+}
+}
+void loop() {
+ int deger = analogRead(pot);
+ deger=map(deger,0,1023,0,6);
+ Serial.println(ledler[deger]);
+ if(ledler[deger]==2){
+   digitalWrite(2,HIGH);
+  delay(sure);
+ }
+  else{
+   digitalWrite(2,LOW);
+   delay(sure);
+}
+ if(ledler[deger]==3){
+   digitalWrite(3,HIGH);
+  delay(sure);
+ }
+  else{
+   digitalWrite(3,LOW);
+   delay(sure);
+}
+ if(ledler[deger]==4){
+   digitalWrite(4,HIGH);
+  delay(sure);
+ }
+  else{
+   digitalWrite(4,LOW);
+   delay(sure);
+}
+ if(ledler[deger]==5){
+   digitalWrite(5,HIGH);
+  delay(sure);
+ }
+  else{
+   digitalWrite(5,LOW);
+   delay(sure);
+}
+ if(ledler[deger]==6){
+   digitalWrite(6,HIGH);
+  delay(sure);
+ }
+  else{
+   digitalWrite(6,LOW);
+   delay(sure);
+}
+ if(ledler[deger]==7){
+   digitalWrite(7,HIGH);
+  delay(sure);
+ }
+  else{
+   digitalWrite(7,LOW);
+   delay(sure);
+}
+}
